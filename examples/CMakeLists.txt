@@ -88,6 +88,10 @@ if (ENABLE_LINUX)
 
     add_executable(vmi-linux-offsets linux-offsets.c)
     target_link_libraries(vmi-linux-offsets vmi_shared)
+
+    add_executable(vmi-vma-list vma-list.c)
+    set_property(TARGET vmi-vma-list PROPERTY C_STANDARD 99)
+    target_link_libraries(vmi-vma-list vmi_shared)
 endif ()
 
 install(TARGETS
